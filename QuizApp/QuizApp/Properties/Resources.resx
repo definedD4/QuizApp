@@ -127,4 +127,31 @@
   <data name="StartTimeParseErrorString" xml:space="preserve">
     <value>Начальное время введено неправельно. Пожалуйста введите время в формате: минуты:секунды. Пример: 5:32.55</value>
   </data>
+  <data name="Team1AnsweringText" xml:space="preserve">
+    <value>Команда 1 отвечает</value>
+  </data>
+  <data name="ContinueText" xml:space="preserve">
+    <value>Продолжить</value>
+  </data>
+  <data name="StopText" xml:space="preserve">
+    <value>Остановить</value>
+  </data>
+  <data name="Player1AnsweringText" xml:space="preserve">
+    <value>Команда 1 отвечает</value>
+  </data>
+  <data name="Player2AnsweringText" xml:space="preserve">
+    <value>Команда 2 отвечает</value>
+  </data>
+  <data name="Player3AnsweringText" xml:space="preserve">
+    <value>Команда 3 отвечает</value>
+  </data>
+  <data name="RunText" xml:space="preserve">
+    <value>Запуск</value>
+  </data>
+  <data name="ResetText" xml:space="preserve">
+    <value>Заново</value>
+  </data>
+  <data name="OutOfTimeText" xml:space="preserve">
+    <value>Время вышло.</value>
+  </data>
 </root>

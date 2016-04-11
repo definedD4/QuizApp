@@ -61,11 +61,74 @@ namespace QuizApp.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Продолжить.
+        /// </summary>
+        internal static string ContinueText {
+            get {
+                return ResourceManager.GetString("ContinueText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream LongBeep {
             get {
                 return ResourceManager.GetStream("LongBeep", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Время вышло..
+        /// </summary>
+        internal static string OutOfTimeText {
+            get {
+                return ResourceManager.GetString("OutOfTimeText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Команда 1 отвечает.
+        /// </summary>
+        internal static string Player1AnsweringText {
+            get {
+                return ResourceManager.GetString("Player1AnsweringText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Команда 2 отвечает.
+        /// </summary>
+        internal static string Player2AnsweringText {
+            get {
+                return ResourceManager.GetString("Player2AnsweringText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Команда 3 отвечает.
+        /// </summary>
+        internal static string Player3AnsweringText {
+            get {
+                return ResourceManager.GetString("Player3AnsweringText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Заново.
+        /// </summary>
+        internal static string ResetText {
+            get {
+                return ResourceManager.GetString("ResetText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Запуск.
+        /// </summary>
+        internal static string RunText {
+            get {
+                return ResourceManager.GetString("RunText", resourceCulture);
             }
         }
         
@@ -84,6 +147,24 @@ namespace QuizApp.Properties {
         internal static string StartTimeParseErrorString {
             get {
                 return ResourceManager.GetString("StartTimeParseErrorString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Остановить.
+        /// </summary>
+        internal static string StopText {
+            get {
+                return ResourceManager.GetString("StopText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Команда 1 отвечает.
+        /// </summary>
+        internal static string Team1AnsweringText {
+            get {
+                return ResourceManager.GetString("Team1AnsweringText", resourceCulture);
             }
         }
     }

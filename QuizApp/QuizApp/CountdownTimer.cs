@@ -25,11 +25,11 @@ namespace QuizApp
         {
             InitializeComponent();
 
-            m_Timer = new Timer {Interval = 10};
+            m_Timer = new Timer {Interval = 70};
             m_Timer.Tick += (sender, args) =>
             {
                 TimeLeft = m_TotalTime - m_Stopwatch.Elapsed;
-                if (TimeLeft < TimeSpan.Zero)
+                if (TimeLeft <= TimeSpan.Zero)
                 {
                     TimeLeft = TimeSpan.Zero;
 
@@ -39,6 +39,8 @@ namespace QuizApp
                     }
 
                     Pause();
+
+                    TimeElapsed?.Invoke(this, new EventArgs());
                 }
 
                 UpdateTimeShown();
@@ -118,5 +120,7 @@ namespace QuizApp
                 m_LastBeepTime = TimeLeft;
             }
         }
+
+        public event EventHandler TimeElapsed;
     }
 }

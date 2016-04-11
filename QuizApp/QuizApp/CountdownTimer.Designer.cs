@@ -35,10 +35,10 @@
             // timeLabel
             // 
             this.timeLabel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.timeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.timeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.timeLabel.Location = new System.Drawing.Point(0, 0);
             this.timeLabel.Name = "timeLabel";
-            this.timeLabel.Size = new System.Drawing.Size(213, 31);
+            this.timeLabel.Size = new System.Drawing.Size(286, 75);
             this.timeLabel.TabIndex = 0;
             this.timeLabel.Text = "00:00.00";
             this.timeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -46,9 +46,9 @@
             // timeProgressBar
             // 
             this.timeProgressBar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.timeProgressBar.Location = new System.Drawing.Point(0, 30);
+            this.timeProgressBar.Location = new System.Drawing.Point(0, 69);
             this.timeProgressBar.Name = "timeProgressBar";
-            this.timeProgressBar.Size = new System.Drawing.Size(213, 23);
+            this.timeProgressBar.Size = new System.Drawing.Size(286, 23);
             this.timeProgressBar.TabIndex = 1;
             // 
             // CountdownTimer
@@ -58,7 +58,7 @@
             this.Controls.Add(this.timeProgressBar);
             this.Controls.Add(this.timeLabel);
             this.Name = "CountdownTimer";
-            this.Size = new System.Drawing.Size(213, 53);
+            this.Size = new System.Drawing.Size(286, 92);
             this.ResumeLayout(false);
 
         }
