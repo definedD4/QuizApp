@@ -39,7 +39,7 @@ namespace QuizApp
             {
                 m_State = GameState.Running;
 
-                countdownTimer.Reset(TimeSpan.FromMinutes(1));
+                ResetTimer();
                 countdownTimer.Start();
 
                 stateLabel.Text = "";
@@ -65,7 +65,7 @@ namespace QuizApp
         {
             m_State = GameState.Awaiting;
 
-            countdownTimer.Reset(TimeSpan.FromMinutes(1));
+            ResetTimer();
 
             stateLabel.Text = "";
 
@@ -77,7 +77,7 @@ namespace QuizApp
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            countdownTimer.Reset(TimeSpan.FromMinutes(1));
+            ResetTimer();
         }
 
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
@@ -137,6 +137,41 @@ namespace QuizApp
                 resetBtn.Text = Resources.ResetText;
                 runBtn.Enabled = true;
             }
+        }
+
+        private void timeSTb_Leave(object sender, EventArgs e)
+        {
+            double seconds, minutes;
+            if(!double.TryParse(timeSTb.Text, out seconds)){
+                seconds = 0;
+            }
+            if (!double.TryParse(timeMTb.Text, out minutes)){
+                minutes = 1;
+            }
+            while (seconds >= 60)
+            {
+                minutes++;
+                seconds -= 60;
+            }
+
+            timeSTb.Text = seconds.ToString();
+            timeMTb.Text = minutes.ToString();
+        }
+
+        private void ResetTimer()
+        {
+            double minutes = 1, seconds = 0;
+            try
+            {
+                minutes = double.Parse(timeMTb.Text);
+                seconds = double.Parse(timeSTb.Text);
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show("Времмя введено в неверном формате.");
+            }
+            TimeSpan startTime = TimeSpan.FromSeconds(minutes * 60 + seconds);
+            countdownTimer.Reset(startTime);
         }
     }
 }
